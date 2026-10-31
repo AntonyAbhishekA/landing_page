@@ -251,6 +251,261 @@ i:hover{
      
  }
 
+/* Authentication page */
+body:has(.auth-card) {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 12% 18%, rgba(201, 49, 41, 0.11), transparent 30%),
+        radial-gradient(ellipse at 88% 82%, rgba(38, 112, 77, 0.12), transparent 32%),
+        #f7f5ef;
+    color: #242621;
+    font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+body:has(.auth-card) .container {
+    position: relative;
+    top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 48px 20px;
+    border: 0;
+}
+
+body:has(.auth-card) .auth-card {
+    width: min(100%, 440px);
+    padding: 36px 40px 32px;
+    border: 1px solid rgba(36, 38, 33, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 253, 0.96);
+    box-shadow: 0 24px 70px rgba(49, 44, 35, 0.12);
+    animation: auth-arrive 500ms ease-out both;
+}
+
+body:has(.auth-card) .logo {
+    margin-bottom: 28px;
+    color: #c43129;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+body:has(.auth-card) .tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 7px;
+    background: #f0eee7;
+}
+
+body:has(.auth-card) .tabs button {
+    width: auto;
+    height: 42px;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #72736d;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+body:has(.auth-card) .tabs button.active {
+    background: #fff;
+    color: #252722;
+    box-shadow: 0 2px 8px rgba(34, 34, 28, 0.09);
+}
+
+body:has(.auth-card) .auth-card form h2 {
+    margin: 0 0 6px;
+    color: #252722;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+body:has(.auth-card) .auth-card .subtitle {
+    margin: 0 0 24px;
+    color: #777870;
+    font-size: 0.94rem;
+    text-align: left;
+}
+
+body:has(.auth-card) .input-group {
+    margin-bottom: 17px;
+}
+
+body:has(.auth-card) .input-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #3a3b35;
+    font-size: 0.84rem;
+    font-weight: 650;
+}
+
+body:has(.auth-card) .input-group input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 13px;
+    border: 1px solid #d9d8d0;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    color: #242621;
+    font: inherit;
+    font-size: 0.93rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+body:has(.auth-card) .input-group input::placeholder {
+    color: #a4a49d;
+}
+
+body:has(.auth-card) .input-group input:focus {
+    border-color: #c43129;
+    box-shadow: 0 0 0 3px rgba(196, 49, 41, 0.12);
+}
+
+body:has(.auth-card) .input-group .error {
+    display: block;
+    min-height: 0;
+    padding-top: 4px;
+    color: #b42318;
+    font-size: 0.78rem;
+}
+
+body:has(.auth-card) .submit-btn {
+    width: 100%;
+    min-height: 48px;
+    margin: 8px 0 0;
+    border: 0;
+    border-radius: 5px;
+    background: #c43129;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.96rem;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+body:has(.auth-card) .submit-btn:hover {
+    transform: translateY(-1px);
+    background: #a92721;
+}
+
+body:has(.auth-card) .auth-card button:focus-visible {
+    outline: 3px solid rgba(38, 112, 77, 0.38);
+    outline-offset: 3px;
+}
+
+body:has(.auth-card) .auth-card .hidden {
+    display: none !important;
+}
+
+body:has(.auth-card) .coupon {
+    margin-top: 8px;
+    padding: 20px;
+    border: 1px dashed #6b9479;
+    border-radius: 7px;
+    background: #f1f6f0;
+    text-align: center;
+}
+
+body:has(.auth-card) .coupon h3 {
+    padding: 0;
+    color: #276344;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+body:has(.auth-card) .coupon p {
+    margin: 8px 0 15px;
+    color: #555b53;
+    font-size: 0.9rem;
+}
+
+body:has(.auth-card) .coupon-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 9px 8px 12px;
+    border-radius: 5px;
+    background: #fff;
+    color: #276344;
+    letter-spacing: 0.08em;
+}
+
+body:has(.auth-card) .coupon-code button {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 4px;
+    background: #276344;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+}
+
+body:has(.auth-card) #couponMessage,
+body:has(.auth-card) #message {
+    display: block;
+    margin-top: 12px;
+    color: #555b53;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+@keyframes auth-arrive {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    body:has(.auth-card) .container {
+        align-items: flex-start;
+        padding: 20px 14px;
+    }
+
+    body:has(.auth-card) .auth-card {
+        padding: 28px 22px 24px;
+    }
+
+    body:has(.auth-card) .logo {
+        margin-bottom: 22px;
+    }
+
+    body:has(.auth-card) .tabs {
+        margin-bottom: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body:has(.auth-card) *,
+    body:has(.auth-card) *::before,
+    body:has(.auth-card) *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 
 
 
